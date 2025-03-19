@@ -34,6 +34,7 @@ def init_bot(w3):
 
     return bot
 
+#Get the current reserves of each pool
 def update_reserves(bot, w3):
     abi_path = os.path.join(os.path.dirname(__file__), "contracts", "erc20_abi.json")
     with open(abi_path, "r") as f:

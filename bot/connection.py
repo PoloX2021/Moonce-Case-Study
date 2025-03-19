@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv, find_dotenv
 from web3 import Web3
 
+#Define the web3 engine to connect to a node
 def http_connection():
     # Load environment variables from .env file
     dotenv_path = find_dotenv()

@@ -20,7 +20,8 @@ class Token:
         return copy.deepcopy(self)
 
 class Pool:
-    def __init__(self, _address, _symbol, _type, _token0, _token1, _fee = -3):
+    #Fees for Uniswap and Sushiswap are 0.3%
+    def __init__(self, _address, _symbol, _type, _token0, _token1, _fee = 0.003):
         self.address = _address
         self.symbol = _symbol
         self.type = _type
@@ -38,6 +39,7 @@ class Pool:
             self.token1.symbol: self.token1.formatted_reserves(),
         }
     
+    #Simulate the swap of a token in the pool
     def swapIn(self, token, amount):
         K = self.token0.reserves * self.token1.reserves
         amount_after_fees = (1-self.fee) * amount
