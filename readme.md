@@ -14,7 +14,7 @@ Follow these instructions to set up and run the project on your local machine.
 ### Installation
 
 1. **Activate Python Environment**:
-   - Make sure your Python environment is activated. If you're using a virtual environment, activate it using the appropriate command for your system.
+   - Make sure your base Python environment is activated. 
 
 2. **Set Up the Project**:
    - Run the setup script to install dependencies and configure the environment:
