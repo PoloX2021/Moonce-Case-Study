@@ -16,10 +16,9 @@ def main():
         #When there is a new block
         if block > bot.block:
             bot.block = block
-            print(f"Scanning at block: {bot.block}")
             bot = update_reserves(bot, w3)
             weth = Token('0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 'WETH', 18)
-            
+
             #Check for arbitrage opportunities
             log_arbitrages(bot)
         
